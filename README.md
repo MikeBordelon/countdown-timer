@@ -1,4 +1,4 @@
-Clone it down <br>
+clone it down <br>
 npm install <br>
 npm start <br>
 localhost:3000 <br>
