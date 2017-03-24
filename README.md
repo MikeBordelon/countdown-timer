@@ -1,4 +1,6 @@
-NPM install
-localhost:3000
+clone it down <br>
+npm install <br>
+npm start <br>
+localhost:3000 <br>
 
 let the countdown begin...
