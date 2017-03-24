@@ -1,57 +1,26 @@
 import React from 'react';
+import './Squares.css';
 
-const styles = {
-
-  container: {
-        display:  'flex',
-        margin: '0 auto',
-        alignItems: 'center',
-        justifyContent: 'space-around',
-        height: '100px',
-        width: '400px',
-        fontFamily: 'helvetica'
-      },
-
-      squares: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        border: '1px solid gray',
-        borderRadius: '3px',
-        height: '90px',
-        width: '90px'
-      },
-
-      numbers: {
-        fontSize: '30px'
-      },
-
-      DHMS: {
-        fontSize: '15px',
-        color: 'gray'
-      }
-    }
 
 const Squares = ({days, hours, minutes, seconds}) => {
 
     return (
-      <div style={styles.container}>
-        <div style={styles.squares} >
-          <div style={styles.numbers}>{days}</div>
-          <div style={styles.DHMS}>Days</div>
+      <div  className='container'>
+        <div className='squares'>
+          <div className='numbers'>{days}</div>
+          <div className='DHMS'>{days > 1 || days === 0 ? 'Days' : 'Day'}</div>
         </div>
-        <div style={styles.squares} >
-          <div style={styles.numbers}>{hours}</div>
-          <div style={styles.DHMS}>Hours</div>
+        <div className='squares'>
+          <div className='numbers'>{hours}</div>
+          <div className='DHMS'>{hours > 1 || hours === 0 ? 'Hours' : 'Hour'}</div>
         </div>
-        <div style={styles.squares} >
-          <div style={styles.numbers}>{minutes}</div>
-          <div style={styles.DHMS}>Minutes</div>
+        <div className='squares'>
+          <div className='numbers'>{minutes}</div>
+          <div className='DHMS'>{minutes > 1 || minutes === 0 ? 'Minutes' : 'Minute'}</div>
         </div>
-        <div style={styles.squares} >
-          <div style={styles.numbers}>{seconds}</div>
-          <div style={styles.DHMS}>Seconds</div>
+        <div className='squares'>
+          <div className='numbers'>{seconds}</div>
+          <div className='DHMS'>{seconds > 1 || seconds === 0 ? 'Seconds' : 'Second'}</div>
         </div>
       </div>
     );
